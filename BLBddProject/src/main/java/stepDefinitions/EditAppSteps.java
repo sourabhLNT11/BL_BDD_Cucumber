@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import Base.TestBase;
+import Pages.GeneralInformationPage;
 import Pages.LacaptialeLoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,6 +11,7 @@ import io.cucumber.java.en.Given;
 public class EditAppSteps extends TestBase{
 	
 	LacaptialeLoginPage loginpage = new LacaptialeLoginPage(driver);
+	GeneralInformationPage genPage = new GeneralInformationPage(driver);
 	
 	@Given("user is on the login page")
 	public void user_is_on_the_login_page() throws InterruptedException {
@@ -25,6 +27,8 @@ public class EditAppSteps extends TestBase{
 	public void user_is_able_to_login() throws InterruptedException {
 		Thread.sleep(10000);
 		loginpage.isDisplayed();
+		genPage.appID();
+		genPage.enterLastName("ABC");
 		
 	}
 

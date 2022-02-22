@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import Base.TestBase;
 import io.cucumber.java.en.Given;
@@ -12,6 +14,10 @@ import io.cucumber.java.en.Given;
 public class GeneralInformationPage  {
 
 	public WebDriver driver;
+	
+	@CacheLookup
+	@FindBy(how = How.XPATH, using = "//td[text()='E94077302']")
+	WebElement appID;
 	
 	@CacheLookup
 	@FindBy(how = How.XPATH, using = "(//input[@class='MuiInputBase-input MuiOutlinedInput-input'])[1]")
@@ -112,4 +118,153 @@ public class GeneralInformationPage  {
 	@CacheLookup
 	@FindBy(how = How.XPATH, using = "(//input[@name='bankruptcy.history_0'])[2]")
 	WebElement bankruptcy;
+	
+	
+	public GeneralInformationPage(WebDriver driver)
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+	
+	public void appID()
+	{
+		this.appID.click();
+	}
+	
+	public void enterLastName(String lastName)
+	{
+		this.lastName.sendKeys(lastName);
+	}
+	
+	public void enterFirstName(String firstName)
+	{
+		this.firstName.sendKeys(firstName);
+	}
+	
+	public void selectSex(String sex)
+	{
+		Select sex1 = new Select(this.sex);
+		sex1.selectByVisibleText(sex);
+	}	
+	
+	public void dob(String dob)
+	{
+		this.DOB.sendKeys(dob);
+	}
+	
+	public void maritalStatus(String maritalStatus)
+	{
+		Select maritalStatus1 = new Select(this.maritalStatus);
+		maritalStatus1.selectByVisibleText(maritalStatus);
+	}
+	
+	public void canadianCitizenY()
+	{
+		this.canadianCitizen.click();
+	}
+	
+	public void address(String address)
+	{
+		this.address.sendKeys(address);
+	}
+	
+	public void city(String city)
+	{
+		this.city.sendKeys(city);
+	}
+	
+	public void province(String province)
+	{
+		Select maritalStatus1 = new Select(this.province);
+		maritalStatus1.selectByVisibleText(province);
+	}
+	
+	public void postalCode(String postalCode)
+	{
+		this.postalCode.sendKeys(postalCode);
+	}
+	
+	public void telephoneType(String telephoneType)
+	{
+		Select telephoneType1 = new Select(this.telephoneType);
+		telephoneType1.selectByVisibleText(telephoneType);
+	}
+	
+	public void telephone(String telephone)
+	{
+		this.telephone.sendKeys(telephone);
+	}
+	
+	public void purposeOfInsuranceMortgage()
+	{
+		this.purposeOfInsuranceMortgage.click();
+	}
+	
+	public void purposeOfInsuranceQ2No()
+	{
+		this.purposeOfInsuranceQ2No.click();
+	}
+	
+	public void purposeOfInsuranceQ3No()
+	{
+		this.purposeOfInsuranceQ3No.click();
+	}
+	
+	public void employmentStatus(String employmentStatus)
+	{
+		Select employmentStatus1 = new Select(this.employmentStatus);
+		employmentStatus1.selectByVisibleText(employmentStatus);
+	}
+	
+	public void employerName(String employerName)
+	{
+		this.employerName.sendKeys(employerName);
+	}
+	
+	public void occupationAssociateQ1()
+	{
+		this.occupationAssociateQ1.click();
+	}
+	
+	public void occupationAssociateQ2()
+	{
+		this.occupationAssociateQ2.click();
+	}
+	
+	public void occupationAssociateQ3()
+	{
+		this.occupationAssociateQ3.click();
+	}
+	
+	public void occupation(String occupation)
+	{
+		this.occupation.sendKeys(occupation);
+	}
+	
+	public void annualGrossIncome(String annualGrossIncome)
+	{
+		this.annualGrossIncome.sendKeys(annualGrossIncome);
+	}
+	
+	public void totalAssets(String totalAssets)
+	{
+		this.totalAssets.sendKeys(totalAssets);
+	}
+	
+	public void totalLiabilities(String totalLiabilities)
+	{
+		this.totalLiabilities.sendKeys(totalLiabilities);
+	}
+	
+	public void bankruptcy()
+	{
+		this.bankruptcy.click();
+	}
+	
+	
+	
+	
+	
 }
