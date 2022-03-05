@@ -69,10 +69,13 @@ public class BLHooks {
 			testBase.selectBrowser(prop.getProperty("browser"));
 		}
 	}
+	
 	@After
 	public void endTest()
 	{
-		testBase.driver.close();
+		System.out.println("in End test");
+		TestBase.driver.quit();
+		
 	}
 	
 }

@@ -16,7 +16,7 @@ public class GeneralInformationPage  {
 	public WebDriver driver;
 	
 	@CacheLookup
-	@FindBy(how = How.XPATH, using = "//td[text()='E94077302']")
+	@FindBy(how = How.XPATH, using = "//td[text()='E35373430']")
 	WebElement appID;
 	
 	@CacheLookup
@@ -177,8 +177,8 @@ public class GeneralInformationPage  {
 	
 	public void province(String province)
 	{
-		Select maritalStatus1 = new Select(this.province);
-		maritalStatus1.selectByVisibleText(province);
+		Select province1 = new Select(this.province);
+		province1.selectByVisibleText(province);
 	}
 	
 	public void postalCode(String postalCode)
@@ -263,7 +263,16 @@ public class GeneralInformationPage  {
 		this.bankruptcy.click();
 	}
 	
-	
+	/*public void clear(String Option)
+	{
+		switch(Option)
+		{
+			case "firstname": 
+			this.firstName.clear();
+			break;
+				
+		}
+	}*/
 	
 	
 	

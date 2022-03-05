@@ -1,15 +1,18 @@
 package Base;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Properties;
-
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -19,7 +22,7 @@ public class TestBase {
 	public Properties prop;
 	public final String configFilePath  = "Configs//Config.properties";
 	public static WebDriver driver;
-	public RemoteWebDriver driver1;
+	//public RemoteWebDriver driver1;
 	
 
 	  
@@ -97,8 +100,8 @@ public class TestBase {
 	    caps.setCapability("os_version", prop.getProperty("os_version"));
 	    //caps.setCapability("browserstack.local", "true");
 	    caps.setCapability("name", "BL Lacapitale Test1"); // test name
-	    caps.setCapability("browserstack.console", "disable");
-	    caps.setCapability("browserstack.idleTimeout", 120);
+	   // caps.setCapability("browserstack.console", "disable");
+	    //caps.setCapability("browserstack.idleTimeout", 120);
 	    caps.setCapability("browserstack.debug", "false");
 	    
 	    //caps.setCapability("build", "BStack Build Number 1"); // CI/CD job or build name
@@ -107,6 +110,8 @@ public class TestBase {
 	    try
 	    {
 	    	 driver = new RemoteWebDriver(new java.net.URL(URL),caps);
+	    	// File srcFile = (File) ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	    	// FileHandler.copy(srcFile, new File("C:\\Users\\10694212\\git\\BL_BDD_Cucumber\\BLBddProject\\Screenshots"));
 	    }
 	    catch(MalformedURLException e)
 	    {

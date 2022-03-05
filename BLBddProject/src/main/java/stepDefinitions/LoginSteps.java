@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Base.TestBase;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -30,11 +32,14 @@ public class LoginSteps extends TestBase {
 	}
 
 	@When("user enters username and password")
-	public void user_enters_username_and_password() {
+	public void user_enters_username_and_password(DataTable testData) throws Throwable {
 		System.out.println("In When function");
-		loginpage.enterUserName("dev@breathelife.com");
+		//loginpage.enterUserName("dev@breathelife.com");
+		Map<String, String> data = testData.asMap(String.class,String.class);
+		
+		loginpage.enterUserName(data.get("username"));
 
-		loginpage.enterPassword("9Lf06$9^GQox");
+		loginpage.enterPassword(data.get("password"));
 	}
 
 	@And("clicks on login button")
@@ -52,7 +57,7 @@ public class LoginSteps extends TestBase {
 		//wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[text()='New application']")));
 		Thread.sleep(10000);
 		loginpage.isDisplayed();
-		
+		//driver.close();
 	}
 
 }
