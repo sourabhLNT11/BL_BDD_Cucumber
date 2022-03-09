@@ -98,7 +98,7 @@ public class TestBase {
 	    //caps.setCapability("realMobile", "true");
 	    caps.setCapability("os", prop.getProperty("os"));
 	    caps.setCapability("os_version", prop.getProperty("os_version"));
-	    //caps.setCapability("browserstack.local", "true");
+	  //caps.setCapability("browserstack.local", "false");
 	    caps.setCapability("name", "BL Lacapitale Test1"); // test name
 	   // caps.setCapability("browserstack.console", "disable");
 	    //caps.setCapability("browserstack.idleTimeout", 120);
