@@ -57,7 +57,7 @@ public class ContractPolicyHoldersPage {
 	WebElement address;
 	
 	@CacheLookup
-	@FindBy(how = How.XPATH, using = "(//input[@name='contract.mainPolicyholder.otherPolicyHolderMaritalStatus'])[2]")
+	@FindBy(how = How.XPATH, using = "//input[@name='contract.mainPolicyholder.otherPolicyHolderCitydetails']")
 	WebElement city;
 	
 	@FindBy(id="mui-component-select-contract.mainPolicyholder.otherPolicyHolderProvincedetails")
