@@ -142,6 +142,14 @@
 			 <artifactId>webdrivermanager</artifactId>
 			 <version>4.3.1</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
+		<dependency>
+		    <groupId>org.junit.platform</groupId>
+		    <artifactId>junit-platform-runner</artifactId>
+		    <version>1.8.2</version>
+		</dependency>
+
 	</dependencies>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
