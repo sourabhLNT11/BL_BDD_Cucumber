@@ -10,7 +10,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src\\test\\resources\\Features\\contract.feature",
+@CucumberOptions(features="src/test/resources/Features/contract.feature",
 glue= {"stepDefinitions"},
 monochrome=true,
 plugin= {"json:target/MyReports/Cucumber_report.json","junit:target/MyReports/Cucumber_report.xml","html:target/MyReports/CucumberHtmlReport.html"},
