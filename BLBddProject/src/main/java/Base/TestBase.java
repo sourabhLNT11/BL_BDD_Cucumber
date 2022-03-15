@@ -59,7 +59,7 @@ public class TestBase {
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 			System.out.println(System.getProperty("user.dir"));
-		    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
+		    System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 		    driver = new ChromeDriver();
 		    driver.manage().window().maximize();
 		    driver.manage().timeouts().implicitlyWait(java.time.Duration.ofMillis(1000));
@@ -69,7 +69,7 @@ public class TestBase {
 		}
 		else
 		{
-	        System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+"\\drivers\\msedgedriver.exe");
+	        System.setProperty("webdriver.edge.driver", "drivers\\msedgedriver.exe");
 	        WebDriver driver = new EdgeDriver();
 		    driver.manage().window().maximize();
 		    configReader();

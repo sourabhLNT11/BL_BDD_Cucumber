@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-09T05:49:20Z" name="stepDefinitions" finished-at="2022-03-09T05:50:40Z" duration-ms="79980">
+  <suite started-at="2022-03-15T06:20:36Z" name="stepDefinitions" finished-at="2022-03-15T06:20:39Z" duration-ms="2334">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepDefinitions.TestRunner@41fe9859]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepDefinitions.TestRunner@3e2822]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-03-09T05:49:20Z" name="Test" finished-at="2022-03-09T05:50:40Z" duration-ms="79980">
+    <test started-at="2022-03-15T06:20:36Z" name="Test" finished-at="2022-03-15T06:20:39Z" duration-ms="2334">
       <class name="stepDefinitions.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:stepDefinitions.TestRunner@41fe9859]" started-at="2022-03-09T05:49:20Z" name="setUpClass" finished-at="2022-03-09T05:49:21Z" duration-ms="371" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:stepDefinitions.TestRunner@3e2822]" started-at="2022-03-15T06:20:36Z" name="setUpClass" finished-at="2022-03-15T06:20:36Z" duration-ms="310" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1eeb5818]]>
+                <![CDATA[org.testng.TestRunner@2938127d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setUpCucumber()[pri:0, instance:stepDefinitions.TestRunner@41fe9859]" started-at="2022-03-09T05:49:21Z" name="setUpCucumber" finished-at="2022-03-09T05:49:21Z" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="setUpCucumber()[pri:0, instance:stepDefinitions.TestRunner@3e2822]" started-at="2022-03-15T06:20:36Z" name="setUpCucumber" finished-at="2022-03-15T06:20:37Z" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpCucumber -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepDefinitions.TestRunner@41fe9859]" started-at="2022-03-09T05:49:21Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-09T05:50:38Z" duration-ms="77481" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepDefinitions.TestRunner@3e2822]" started-at="2022-03-15T06:20:37Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-15T06:20:37Z" duration-ms="129" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -38,10 +38,29 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable must exist: C:\Users\10694212\git\BL_BDD_Cucumber\BLBddProjectdrivers\chromedriver.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable must exist: C:\Users\10694212\git\BL_BDD_Cucumber\BLBddProjectdrivers\chromedriver.exe
+at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:342)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:127)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:48)
+at Base.TestBase.selectBrowser(TestBase.java:63)
+at stepDefinitions.BLHooks.setupUrl(BLHooks.java:69)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:stepDefinitions.TestRunner@41fe9859]" started-at="2022-03-09T05:50:38Z" name="tearDownClass" finished-at="2022-03-09T05:50:40Z" duration-ms="2048" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:stepDefinitions.TestRunner@3e2822]" started-at="2022-03-15T06:20:37Z" name="tearDownClass" finished-at="2022-03-15T06:20:39Z" duration-ms="1816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
